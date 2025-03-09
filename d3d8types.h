@@ -20,7 +20,9 @@
 #include <float.h>
 
 #pragma warning(disable:4201) // anonymous unions warning
+#if defined (_WIN32) && !defined (_WIN64)
 #pragma pack(4)
+#endif
 
 // D3DCOLOR is equivalent to D3DFMT_A8R8G8B8
 #ifndef D3DCOLOR_DEFINED
